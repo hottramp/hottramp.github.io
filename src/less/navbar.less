@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// navbar override
+//
+// =============================================================================
+
+
+.navbar {
+    text-transform: uppercase;
+
+    .active {
+        outline: 2px solid @red;
+    }
+}
+
+.navbar-brand {
+    display: table;
+    padding: 14px 15px;
+
+    @media (max-width: @screen-sm-min) {
+        padding: 0 15px;
+    }
+}
+
+.navbar-nav {
+    padding-left: 0;
+}
+
+.navbar-right {
+    margin-right: 0;
+    padding: 15px 0;
+}

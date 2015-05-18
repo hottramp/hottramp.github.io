@@ -1,0 +1,43 @@
+@import url('mixins.less');
+@import url('core.less');
+@import url('navigation.less');
+@import url('effects.less');
+@import url('scrollbar.less');
+@import url('preloader.less');
+
+// Customisations
+.swiper-container {
+    z-index: 5;
+    width: 100%;
+    height: 500px;
+
+    &.swiper-container--gig {
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+}
+
+.swiper-slide {
+    padding: 40px 60px;
+    color:#fff;
+    font-size: 18px;
+    box-sizing: border-box;
+
+    &.swiper-slide--gig {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media (max-width: @screen-sm-min) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+}

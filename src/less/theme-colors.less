@@ -1,0 +1,30 @@
+@charset "utf-8";
+// =============================================================================
+// Theme colors
+//
+// =============================================================================
+
+
+@red: #ea1e29;
+
+@red-lighter : lighten(#ea1e29, 6%);
+@red-light   : lighten(#ea1e29, 3%);
+@red-dark    : darken(#ea1e29, 3%);
+@red-darker  : darken(#ea1e29, 6%);
+
+// http://lesscss.org/functions/#misc-functions-svg-gradient
+.grad-svg-red-lighter() {
+    background-image: svg-gradient(to bottom, @red-lighter, @red 50%, @red-lighter);
+}
+
+.grad-svg-red-light() {
+    background-image: svg-gradient(to bottom, @red-light, @red 50%, @red-light);
+}
+
+.grad-svg-red-dark() {
+    background-image: svg-gradient(to bottom, @red-dark, @red 50%, @red-dark);
+}
+
+.grad-svg-red-darker() {
+    background-image: svg-gradient(to bottom, @red-darker, @red 50%, @red-darker);
+}

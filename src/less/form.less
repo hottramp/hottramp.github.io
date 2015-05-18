@@ -1,0 +1,251 @@
+@charset "utf-8";
+// =============================================================================
+// Form controls
+//
+// Note: may add aria-describedby on input (see: form-input-help.less)
+//
+// =============================================================================
+
+
+// Settings
+// =============================================================================
+@sm: ~"(max-width: 768px)";
+
+@legend-text-color:         #333;
+@legend-border-color:       #ddd;
+
+@label-width:               10em;
+@label-text-color:          #fff;
+@label-bg:                  transparent;
+@label-align:               left;
+
+@input-bg:                  transparent;
+@input-border-color:        #ddd;
+@input-disabled-color:      #cad2d3;
+@input-disabled-bg:         #eaeded;
+@input-invalid-color:       #b94a48;
+@input-invalid-border:      #ee5f5b;
+@input-lineheight:          16px; // better control over height of input fields, add if required
+
+@border-radius:             0;
+
+@checkbox-size:             2em;
+@checkbox-color:            #ccc;
+
+@focus-outline-color:       @red;
+
+@placeholder-text-color:    #999;
+
+
+// General styles
+// =============================================================================
+
+fieldset {
+    margin: 0;
+    padding: .35em 0 .75em;
+    border: 0;
+}
+
+legend {
+    display: block;
+    padding: .3em 0;
+    width: 100%;
+    color: @legend-text-color;
+    border-bottom: 1px solid @legend-border-color;
+    font-size: 14px;
+    white-space: normal; // FF3
+}
+
+// If mixing returned / calculated values within a form use div.static-
+label,
+static-label {
+    margin: .5em 0 .2em;
+    color: @label-text-color;
+    background-color: @label-bg;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: @label-align;
+    .user-select;
+}
+
+input,
+select,
+textarea,
+.static-form-control {
+    display: inline-block;
+    margin: 0;
+    padding: .5em .6em;
+    background-color: @input-bg;
+    border-radius: @border-radius;
+    border: 1px solid @input-border-color;
+    transition: border, .3s, linear;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: baseline;
+}
+
+// removes the IE "helper" icons, specifically on password field
+// See: http://stackoverflow.com/questions/17000562/removing-clear-and-reavel-password-icons-from-ie10-ms-clear-ms-reveal-not
+
+input::-ms-clear,
+input::-ms-reveal {
+    display:none;
+}
+
+
+// Input states
+// =============================================================================
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: @focus-outline-color;
+    outline: 0;
+    outline: thin dotted \9; // IE6-9
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: thin dotted @focus-outline-color;
+    outline: 1px auto @focus-outline-color;
+}
+
+
+// disabled
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+    color: @input-disabled-color;
+    background-color: @input-disabled-bg;
+    border-color: transparent;
+    cursor: not-allowed;
+}
+
+// invalid
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+    color: @input-invalid-color;
+    border: 1px solid @input-invalid-border;
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+    border-color: @input-invalid-border;
+}
+
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+    outline-color: @input-invalid-border;
+}
+
+
+// Placeholder text
+// Can't group these styles up (browsers fail to read)
+// =============================================================================
+
+.placeholder(@color: @placeholder-text-color) {
+    &:-moz-placeholder            { color: @color; } // Firefox 4-18
+    &::-moz-placeholder           { color: @color; } // Firefox 19+
+    &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+    &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+
+    // "Hide" the placeholder text on focus to save confusion
+    &:focus:-moz-placeholder            { color: transparent; }
+    &:focus::-moz-placeholder           { color: transparent; }
+    &:focus:-ms-input-placeholder       { color: transparent; }
+    &:focus::-webkit-input-placeholder  { color: transparent; }
+}
+
+input,
+textarea {
+    .placeholder;
+}
+
+
+// Form alignment
+// Default is inline
+// =============================================================================
+
+.control-group {
+    margin-bottom: .5em;
+}
+
+.labels-right {
+
+    label {
+        text-align: right;
+    }
+}
+
+.labels-left {
+
+    label {
+        text-align: left;
+    }
+}
+
+.offset {
+    margin-left: @label-width;
+}
+
+// Stacked inputs
+// Set labels and input controls to block
+.stacked-inputs {
+    input[type="text"],
+    select,
+    label {
+        display: block;
+    }
+}
+
+
+// Textarea
+// =============================================================================
+
+.resizable(@direction: both) {
+  // options: none, horizontal, vertical, both
+  resize: @direction;
+  // Safari fix
+  overflow: auto;
+}
+
+textarea {
+    .resizable();
+}
+
+.textarea {
+
+    label {
+        vertical-align: top;
+    }
+}
+
+// Project-specific overrides
+// =============================================================================
+
+.stacked-inputs {
+    margin: 0 auto;
+    width: 50%;
+
+    @media @sm {
+        width: 90%;
+    }
+}
+
+textarea {
+    width: 100%;
+}
+
+@media (max-width: 560px) {
+
+    input {
+        margin-bottom: 5px;
+    }
+}

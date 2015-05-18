@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+// Social icons
+//
+// =============================================================================
+
+
+.social {
+    position: relative;
+    padding: 0 0 50px;
+    min-height: 500px;
+}
+
+.social-wrapper {
+    position: relative;
+    z-index: 5;
+    margin: 50px auto 0;
+    width: 100%;
+    text-align: center;
+}
+
+.social-ico {
+    display: inline-block;
+    margin: 0 35px;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(67, 65, 65, 0.8);
+    transform: rotate(45deg);
+    cursor: pointer;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        transition: all 0.25s ease-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: @red;
+        }
+    }
+
+    .fa {
+        position: absolute;
+        top: 35px;
+        left: 30px;
+        width: 90px;
+        height: 70px;
+        transform: rotate(-45deg);
+    }
+}

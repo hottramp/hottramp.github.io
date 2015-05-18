@@ -1,0 +1,36 @@
+@charset "utf-8";
+// =============================================================================
+// Typography
+//
+// =============================================================================
+
+.site-title {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    position: relative;
+    z-index: 5;
+    margin: 50px 0 23px;
+    color: #fff;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: calc(~"50% - 25px");
+        width: 50px;
+        border-bottom: 3px solid @red;
+    }
+}

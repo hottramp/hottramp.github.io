@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+// Master stylesheet
+//
+// =============================================================================
+
+
+// Libraries
+@import "bootstrap/bootstrap";
+@import "swiper/swiper";
+@import "font-awesome/font-awesome";
+@import "fancybox/fancybox";
+
+// settings
+@import "theme-colors";
+@import "helpers";
+
+// Styles
+@import "layout";
+@import "typography";
+@import "navbar";
+@import "ytplayer";
+@import "news";
+@import "gig-dates";
+@import "media";
+@import "contact";
+@import "form";
+@import "social-icons";
+
+
+.browsehappy {
+    margin: .2em 0;
+    padding: .2em 0;
+    color: #000;
+    background-color: #ccc;
+}
+
+.logo {
+    display: table-cell;
+    vertical-align: middle;
+
+    > img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    //../img/overlays/overlay-01.png
+    // Select your overlay: overlay-01, overlay-02, overlay-03...
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADAQMAAABs5if8AAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABdJREFUeF4FwIEMAAAAArCjhBJa6M1UDgNmAOHueR65AAAAAElFTkSuQmCC');
+    opacity: .5;
+    user-select: none;
+}
+
+svg path,
+svg rect {
+    fill: @red;
+}

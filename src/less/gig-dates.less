@@ -1,0 +1,64 @@
+@charset "utf-8";
+// =============================================================================
+// Gig dates
+//
+// =============================================================================
+
+
+.gigs {
+    position: relative;
+    margin-top: 100px;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+
+    > .parallax {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 500px;
+        background-color: #333;
+        background: url(../img/parallax/01.jpg) 50% 0 repeat-y fixed;
+        background-size: cover !important;
+        text-align: center;
+    }
+}
+
+.event {
+
+    .start {
+        float: left;
+        overflow: hidden;
+        margin: 0 9px 9px 0;
+        padding-bottom: 9px;
+        width: 65px;
+        color: #fff;
+        background-color: #c3121c;
+        text-align: center;
+    }
+
+    .day {
+        font-size: 30px;
+    }
+
+    .month {
+        font-size: 17px;
+    }
+
+    .year {
+        font-size: 12px;
+    }
+
+    .details {
+        float: left;
+        overflow: hidden;
+        margin-right: 9px;
+        text-align: left;
+
+        a {
+            &:extend(.news-item__text a all);
+        }
+    }
+}

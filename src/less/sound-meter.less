@@ -1,0 +1,82 @@
+﻿@charset "utf-8";
+// =============================================================================
+// Sound bars
+//
+// =============================================================================
+
+
+// http://codepen.io/Emmanuel_Franc/pen/Kbyxu
+// ul.soundbar>li*7
+.soundbar-animation(@bg-color: #fff; @delay) {
+    background-color: @bg-color;
+    animation: scale 1.2s linear infinite @delay;
+}
+
+.soundbar {
+    display: table-cell;
+    vertical-align: middle;
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 0;
+
+    li {
+        display: inline-block;
+        margin-right: 2px;
+        width: 10px;
+        height: 50px;
+
+        &:first-child {
+            width: 3px;
+            .grad-svg-red-dark;
+            .soundbar-animation(#2ecc71, -0.9s);
+        }
+
+        &:nth-child(2) {
+            width: 5px;
+            .grad-svg-red-lighter;
+            .soundbar-animation(#3498db, -0.8s);
+        }
+
+        &:nth-child(3) {
+            width: 8px;
+            .grad-svg-red-darker;
+            .soundbar-animation(#9b59b6, -0.7s);
+        }
+
+        &:nth-child(4) {
+            .grad-svg-red-light;
+            .soundbar-animation(#e67e22, -0.6s);
+        }
+
+        &:nth-child(5) {
+            width: 8px;
+            .grad-svg-red-dark;
+            .soundbar-animation(#c0392b, -0.5s);
+        }
+
+        &:nth-child(6) {
+            width: 5px;
+            .grad-svg-red-lighter;
+            .soundbar-animation(#e74c3c, -0.4s);
+        }
+
+        &:nth-child(7) {
+            width: 3px;
+            .grad-svg-red-darker;
+            .soundbar-animation(#e74c8c, -0.3s);
+        }
+    }
+}
+
+@keyframes scale {
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.2);
+    }
+
+    20%,
+    60% {
+        transform: scaleY(1);
+    }
+}

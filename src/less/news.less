@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+// News section
+//
+// =============================================================================
+
+
+.news-parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 130%;
+    height: 100%;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/news/parallax-news.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.news-item {
+    margin: 0 auto;
+    width: 50%;
+
+    @media (max-width: @screen-sm-min) {
+        width: 100%;
+    }
+}
+
+.news-item__title {
+    margin:  0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.news-item__subtitle {
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(234, 30, 41, 0.5);
+    text-align: center;
+}
+
+.news-item__text {
+    line-height: 28px;
+
+    a {
+        padding: 0 1px;
+        color: #fff;
+        background-color: @red;
+        border-bottom: 3px solid darken(@red, 20%);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+        &:hover,
+        &:focus,
+        &:active {
+            position: relative;
+            top: 1px;
+            border-bottom: none;
+            text-decoration: none;
+        }
+    }
+}

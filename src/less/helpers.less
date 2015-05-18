@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+// Helper mixins and classes
+//
+// =============================================================================
+
+// Micro clearfix
+// See http://nicolasgallagher.com/micro-clearfix-hack/
+.cf() {
+
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    *zoom: 1;
+}
+
+.vis-hide {
+    overflow: hidden;
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.full-hide {
+    display: none !important;
+    visibility: hidden;
+}
+
+.user-select() {
+    -webkit-touch-callout: none;
+    user-select: none;
+    outline: none;
+    white-space: nowrap;
+}
+
+// Also set width and perhaps some padding
+.text-overflow-ellipsis() {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// Vertically center some text within a block whilst allowing it to wrap
+.v-center() {
+    display: table;
+}
+
+.v-center__inner() {
+    display: table-cell;
+    vertical-align: middle;
+}
