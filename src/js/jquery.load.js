@@ -48,7 +48,7 @@
 
         var gigSwiper = new Swiper('#gigSwiper', {
             a11y: true,
-            initialSlide: 7,
+            initialSlide: 12,
             pagination: '.swiper-pagination',
             slidesPerView: 2,
             paginationClickable: true,
