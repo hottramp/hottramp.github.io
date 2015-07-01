@@ -11801,7 +11801,7 @@ else if (typeof define === 'function' && define.amd) {
 
         var gigSwiper = new Swiper('#gigSwiper', {
             a11y: true,
-            initialSlide: 12,
+            initialSlide: 13,
             pagination: '.swiper-pagination',
             slidesPerView: 2,
             paginationClickable: true,
