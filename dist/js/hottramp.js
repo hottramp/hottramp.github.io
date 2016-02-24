@@ -11801,7 +11801,7 @@ else if (typeof define === 'function' && define.amd) {
 
         var gigSwiper = new Swiper('#gigSwiper', {
             a11y: true,
-            initialSlide: 1,
+            initialSlide: 4,
             pagination: '.swiper-pagination',
             slidesPerView: 2,
             paginationClickable: true,
@@ -11813,7 +11813,7 @@ else if (typeof define === 'function' && define.amd) {
 
         var mediaquery = "(max-width: 529px)";
 
-        
+
         $('.grid-container').waitForImages().done(function() {
 
             // initialize Isotope
@@ -11840,7 +11840,7 @@ else if (typeof define === 'function' && define.amd) {
             $container.isotope('layout');
         }
 
-        
+
 
         // Parallax effects
         function loadParallax() {

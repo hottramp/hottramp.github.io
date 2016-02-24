@@ -48,7 +48,7 @@
 
         var gigSwiper = new Swiper('#gigSwiper', {
             a11y: true,
-            initialSlide: 1,
+            initialSlide: 4,
             pagination: '.swiper-pagination',
             slidesPerView: 2,
             paginationClickable: true,
@@ -60,7 +60,7 @@
 
         var mediaquery = "(max-width: 529px)";
 
-        
+
         $('.grid-container').waitForImages().done(function() {
 
             // initialize Isotope
@@ -87,7 +87,7 @@
             $container.isotope('layout');
         }
 
-        
+
 
         // Parallax effects
         function loadParallax() {
