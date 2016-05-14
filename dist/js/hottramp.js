@@ -11803,7 +11803,7 @@ else if (typeof define === 'function' && define.amd) {
             a11y: true,
             initialSlide: 10,
             pagination: '.swiper-pagination',
-            slidesPerView: 2,
+            slidesPerView: 1,
             paginationClickable: true,
             nextButton: '#gigsNext',
             prevButton: '#gigsPrev',

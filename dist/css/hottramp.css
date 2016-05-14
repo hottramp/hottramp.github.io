@@ -1520,7 +1520,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin: 0 auto;
 }
 .swiper-slide {
-  padding: 40px 60px;
+  padding: 40px;
   color: #fff;
   font-size: 18px;
   box-sizing: border-box;
@@ -1938,6 +1938,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   .navbar-brand {
     padding: 0 15px;
   }
+}
+.navbar-header {
+  height: 52px;
 }
 .navbar-nav {
   padding-left: 0;
