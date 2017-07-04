@@ -60,3 +60,21 @@
         }
     }
 }
+
+.link-highlight {
+    padding: 0 1px;
+    color: #fff;
+    background-color: @red;
+    border-bottom: 3px solid darken(@red, 20%);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    &:hover,
+    &:focus,
+    &:active {
+        position: relative;
+        top: 1px;
+        color: #fff;
+        border-bottom: none;
+        text-decoration: none;
+    }
+}

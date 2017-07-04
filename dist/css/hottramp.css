@@ -2266,6 +2266,22 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-bottom: none;
   text-decoration: none;
 }
+.link-highlight {
+  padding: 0 1px;
+  color: #fff;
+  background-color: #ea1e29;
+  border-bottom: 3px solid #940e15;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.link-highlight:hover,
+.link-highlight:focus,
+.link-highlight:active {
+  position: relative;
+  top: 1px;
+  color: #fff;
+  border-bottom: none;
+  text-decoration: none;
+}
 .gigs {
   position: relative;
   margin-top: 100px;
